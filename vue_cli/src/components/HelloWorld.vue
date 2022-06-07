@@ -12,11 +12,11 @@ export default {
             nome: 'ainda não sei'
        } 
     },
-    created() { // cria um dadk
+    created() { // cria um dado
         this.nome =  "Enzo Gama"      
     },
     mounted() { // uma hierarquia acima do created
-        this.nome = "Fulano de tal"   
+        this.nome = "Fulano de tal"
     },
     created() { // cria um dado e seta no final
         setTimeout(() => {
