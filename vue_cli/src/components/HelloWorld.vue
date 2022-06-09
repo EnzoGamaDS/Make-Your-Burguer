@@ -21,7 +21,13 @@ export default {
     created() { // cria um dado e seta no final
         setTimeout(() => {
             this.nome =  "ciclano"
+            this.lifeCycle()
         }, 1000);
     },
+    methods: {
+        lifeCycle(){
+            console.log('executou')
+        }
+    }
 }
 </script>

@@ -7,7 +7,7 @@ export default {
     name: 'Picture',
     data() {
         return {
-            avatar: "/images/avatar.png",
+            avatar: "./images/avatar.png",
             descricao: "Enzo Gama"
         }
     },
