@@ -19,3 +19,13 @@ export default {
   }
 }
 </script>
+
+<style>
+  body{
+    background-color: #333;
+    color: #FFF;
+  }
+  a{
+    color: red;
+  }
+</style>
