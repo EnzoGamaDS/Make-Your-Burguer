@@ -22,7 +22,7 @@ export default {
 
 <style>
   body{
-    background-color: #333;
+    background-color: #333; 
     color: #FFF;
   }
   a{
