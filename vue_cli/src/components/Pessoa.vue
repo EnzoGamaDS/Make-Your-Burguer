@@ -3,7 +3,7 @@
         <h2>
             Essa é a descrição da Pessoa : {{nome}}
         </h2>
-        <Info/>
+        <Info :email="email" :esta_trabalhando="true"/>
     </div>
 </template>
 
@@ -16,7 +16,8 @@ import Info from './Info.vue';
     },
     data() {
         return {
-            nome: "Enzinho delax"
+            nome: "Enzinho delax",
+            email:"gamagamgama@gama.com"
         };
     },
     components: { Info }

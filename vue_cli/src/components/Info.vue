@@ -1,5 +1,6 @@
 <template>
    <div>
+        <p>{{compEmail}} -- {{email}}</p>
         <p v-if="esta_trabalhando">
             Estou trabalhando no momento
         </p>
@@ -32,11 +33,13 @@ import Picture from './Picture.vue'
         Picture 
         },
     name: "Info",
+    props:{
+        email: String,
+        esta_trabalhando: Boolean
+    },
     data() {
         return {
-            esta_trabalhando: true,
             mostrar_email: false,
-            email: "gamaenzosw@hotmail.com",
             meu_link: "https://google.com",
             textoBotao: "Mostrar email",
             backend_tecs: ['PHP', 'JS', 'Java'],
