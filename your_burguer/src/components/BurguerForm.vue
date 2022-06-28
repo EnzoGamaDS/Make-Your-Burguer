@@ -1,6 +1,5 @@
 <template>
     <div>
-        <p>monte seu form</p>
         <div>
             <form id="burguer-form">
                 <div class="input-container">
@@ -11,29 +10,21 @@
                     <label for="pao">Escolha o pão</label>
                     <select name="pao" id="pao">
                         <option value="">Selecione o seu pão</option>
-                        <option value="integral">Integral</option>
+                        <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{pao.tipo}}</option>
                     </select>
                 </div>
                 <div class="input-container">
                     <label for="carne">Escolha a carne</label>
                     <select name="carne" id="carne">
                         <option value="">Selecione o tipo de carne</option>
-                        <option value="maminha">maminha</option>
+                        <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">{{carne.tipo}}</option>
                     </select>
                 </div>
                 <div id="opcionais-container" class="input-container">
                     <label id="opcionais-title" for="opcionais">Escolha os opcionais</label>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="opcionais" v-model="opcionais" value="salame">
-                        <span>Salame</span>
-                    </div>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="opcionais" v-model="opcionais" value="salame">
-                        <span>Salame</span>
-                    </div>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="opcionais" v-model="opcionais" value="salame">
-                        <span>Salame</span>
+                    <div class="checkbox-container" v-for="opcional in opcionaisData" :key="opcional.id" >
+                        <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
+                        <span>{{opcional.tipo}}</span>
                     </div>
                 </div>
                 <div>
@@ -45,7 +36,33 @@
 </template>
 <script>
 export default {
-    name:'BuerguerForm'        
+    name:'BuerguerForm',
+    data() {
+        return {
+            paes: null,
+            carnes: null,
+            opcionaisData: null,
+            nome:null,
+            carne:null,
+            opcionais:[],
+            status:"Solicitado",
+            msg:null
+        }
+    },  
+    methods: {
+        async getIngredientes(){
+            const req = await fetch('http://localhost:3000/ingredientes');
+            const data = await req.json();
+
+            this.paes = data.paes;
+            this.carnes = data.carnes
+            this.opcionaisData = data.opcionais;
+            console.table(data);
+        }
+    },
+    mounted() {
+        this.getIngredientes();
+    }
  }
 </script>
 <style scoped>
@@ -84,7 +101,7 @@ input select {
 .checkbox-container{
     display: flex;
     align-items: flex-start;
-    widows: 50%;
+    width: 50%;
     margin-bottom: 20px;
 }
 .checkbox-container span,
