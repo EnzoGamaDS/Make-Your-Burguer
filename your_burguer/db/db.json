@@ -85,8 +85,21 @@
       "opcionais": [
         "Bacon"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 1
+    },
+    {
+      "nome": "Josevaldo",
+      "carne": "Alcatra",
+      "pao": 2,
+      "opcionais": [
+        "Bacon",
+        "Cheddar",
+        "Salame",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 2
     }
   ]
 }
