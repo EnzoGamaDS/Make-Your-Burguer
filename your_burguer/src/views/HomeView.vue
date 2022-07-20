@@ -2,7 +2,6 @@
   <div class="main-container">
     <Banner/>
     <h1>Monte seu burguer:</h1>
-    <p>Formulário</p>
     <BurguerForm/>
   </div>
 </template>
