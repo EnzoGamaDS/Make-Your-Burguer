@@ -79,49 +79,14 @@
   ],
   "burgers": [
     {
-      "nome": "teste",
+      "nome": "formulario 1",
       "carne": "Picanha",
+      "pao": 2,
       "opcionais": [
-        "Cebola roxa",
-        "Pepino"
+        "Bacon"
       ],
       "status": "Solicitado",
       "id": 1
-    },
-    {
-      "nome": "Teste",
-      "carne": "Picanha",
-      "pao": 4,
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "nome": "Teste Grupo",
-      "carne": "Picanha",
-      "pao": 4,
-      "opcionais": [
-        "Bacon",
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "nome": "Joaquina",
-      "carne": "Veggie burger",
-      "pao": 3,
-      "opcionais": [
-        "Pepino",
-        "Cebola roxa",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 4
     }
   ]
 }
