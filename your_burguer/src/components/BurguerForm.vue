@@ -84,7 +84,7 @@ export default {
             //colocar mensagem no sistema
             this.msg = `Pedido N° ${res.id} realizado com sucesso`;
 
-            //limpar mensagem 
+            //limpar mensagem
             setTimeout(() => this.msg = "", 3000);
 
             //limpando form após envio
